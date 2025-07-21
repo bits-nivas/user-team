@@ -32,29 +32,3 @@
 
 ---
 
-### 🔹 Issue: Missing Permissions
-
-**Troubleshooting Steps:**
-1. Compare user’s current roles to access policy of the requested resource.
-2. Review `user_roles`, `group_membership`, or IAM policy JSON for gaps.
-3. Check logs for `403` errors or permission denials.
-
-**Suggested Actions:**
-- Update user's role mapping in IAM tool.
-- Trigger role sync if automated (e.g., SCIM).
-- Audit and document the permission change in ticket notes.
-
----
-
-### 🔹 Issue: Account Locked
-
-**Troubleshooting Steps:**
-1. Review failed login attempts count and timestamp.
-2. Verify if lockout policy was triggered (e.g., 5 failures in 10 minutes).
-3. Confirm via IAM admin UI or logs if lockout is active.
-
-**Suggested Actions:**
-- Unlock user account via IAM admin tool.
-- Inform user of the unlock and reset password instructions.
-- Consider increasing lockout threshold if false positives are common.
-
